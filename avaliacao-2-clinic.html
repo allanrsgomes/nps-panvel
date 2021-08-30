@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panvel Farmácias | Avalie sua compra</title>
+</head>
+<style>
+@font-face {
+font-family: foco;
+src: url(https://cdn1.staticpanvel.com.br/static/site/fonts/Foco_W_Rg.woff) format("woff");
+font-weight: 400;
+font-style: normal
+}
+
+@font-face {
+font-family: foco;
+src: url(https://cdn1.staticpanvel.com.br/static/site/fonts/Foco_W_Bd.woff) format("woff");
+font-weight: 700;
+font-style: normal
+}
+
+@font-face {
+font-family: foco;
+src: url(https://cdn1.staticpanvel.com.br/static/site/fonts/Foco_W_BdIt.woff) format("woff");
+font-weight: 700;
+font-style: italic
+}
+
+@font-face {
+font-family: foco;
+src: url(https://cdn1.staticpanvel.com.br/static/site/fonts/Foco_W_Lt.woff) format("woff");
+font-weight: 300;
+font-style: normal
+}
+
+@font-face {
+    font-family: foco;
+    src: url(https://cdn1.staticpanvel.com.br/static/site/fonts/Foco_W_LtIt.woff) format("woff");
+    font-weight: 300;
+    font-style: italic
+}
+
+body {
+    background: #DFDFDF;
+    margin: 0;
+    font-family: foco, Arial, Helvetica, sans-serif;
+}
+
+.heading {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+/* DESKTOP STYLES START */
+.large-container {
+    background-color: #003986;
+    border-radius: 0 0 20px 0;
+    height: 62px;
+    width: 95%;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.logo {
+    padding-left: 20px;
+    flex: 1;
+}
+
+.logo-2 {
+    display: flex;
+    flex: 20;
+    justify-content: center;
+}
+
+.logo img {
+    width: 30px;
+}
+
+.logo-2 img {
+    width: 178px;
+}
+
+.detalhe {
+    background-color: #1DBADF;
+    width: 3%;
+    border-radius: 0 0 20px 0;
+    height: 45px;
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: black;
+    margin-bottom: 50px;
+}
+
+.title h1{
+    font-family: foco;
+    font-size: 48px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: italic;
+    line-height: 1.15;
+    letter-spacing: normal;
+    text-align: left;
+}
+
+#order-date, #order-number{
+    font-family: foco;
+    opacity: 0.7;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: italic;
+    line-height: 1.11;
+    letter-spacing: normal;
+    text-align: left;
+}
+
+#date-text {
+    opacity: 0.7;
+    font-family: foco;
+    font-size: 15px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: center;
+}
+
+#date-text strong {
+    color: #2691B4;
+}
+
+
+.form-container {
+    width: 90%;
+    height: 1060px;
+    margin: auto;
+    border-radius: 25px;
+    box-shadow: 0 3px 99px 0 rgba(0, 0, 0, 0.16);
+    background-color: #fff;
+}
+
+.form {
+    padding: 80px 100px;
+}
+
+.question-text {
+    font-family: foco;
+    font-size: 15px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #5A5A5A;
+}
+
+h2 {
+    font-family: foco;
+    font-size: 15px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #5A5A5A;
+    margin: 30px 0;
+}
+
+.recommendation {
+    display: flex;
+    justify-content: space-between;
+    color: #5A5A5A;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 40px 0 20px 0;
+}
+
+.notes {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    max-width: 100%;
+}
+
+.note {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12.5px;
+    cursor: pointer;
+    width: calc(100vw/11);
+    height: 37px;
+    border-radius: 3px;
+    border: solid 1px #9f9f9f;
+    color: #5e5e5e;
+    font-size: 16px;
+}
+
+.notes .note:first-child {
+    margin-left: 0;
+}
+
+.notes .note:last-child {
+    margin-right: 0;
+}
+
+.note:hover {
+    -webkit-box-shadow: 0 3px 6px 0 rgba(0, 62, 78, 0.49);
+    -moz-box-shadow: 0 3px 6px 0 rgba(0, 62, 78, 0.49);
+    box-shadow: 0 3px 6px 0 rgba(0, 62, 78, 0.49);
+    border: solid 1px #003986;
+    color: #FFFFFF;
+    background-color: #003986;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+.notes input:checked + label {
+    background: #003986!important;
+    border: 1px solid #003986;
+    color: #fff;
+    outline: 0;
+}
+
+.rate-title {
+    font-family: foco;
+    font-size: 28px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: italic;
+    line-height: 1.14;
+    letter-spacing: normal;
+    text-align: left;
+    color: #253963;
+}
+
+.star-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 68px;
+    border-bottom: solid 1px #f3f3f3;
+}
+
+.rating {
+  overflow: hidden;
+  vertical-align: bottom;
+  display: inline-block;
+  width: auto;
+  height: 23px;
+}
+
+.rating > input {
+  opacity: 0;
+  margin-right: -100%;
+}
+
+.rating > label {
+  position: relative;
+  display: block;
+  float: right;
+  background-size: 100%;
+  cursor: pointer;
+  object-fit: contain;
+  margin: 0 5px;
+  width: 24px;
+  height: 26px;
+}
+
+label[for="q2-nota5"], label[for="q3-nota5"], label[for="q4-nota5"], label[for="q5-nota5"], label[for="1_q2-nota5"], label[for="1_q3-nota5"], label[for="1_q4-nota5"], label[for="1_q5-nota5"], label[for="2_q2-nota5"], label[for="2_q3-nota5"], label[for="2_q4-nota5"], label[for="2_q5-nota5"], label[for="3_q2-nota5"], label[for="3_q3-nota5"], label[for="3_q4-nota5"], label[for="3_q5-nota5"] {
+    margin-right: 0;
+}
+
+.rating > label:before {
+  display: block;
+  content: '';
+  width: 24px;
+  height: 24px;
+  background: url('https://static.cdn.responsys.net/i9/responsysimages/pmcomunic003/contentlibrary/forms/nps/img/star-off.png');
+  background-color: #FFF;
+  left: 0;
+  top: 0;
+  background-size: 100%;
+  transition: opacity 0.2s linear;
+  position: absolute;
+}
+
+.rating > label:after {
+  position: absolute;
+  display: block;
+  opacity: 0;
+  content: '';
+  width: 28px;
+  height: 28px;
+  background: url('https://static.cdn.responsys.net/i9/responsysimages/pmcomunic003/contentlibrary/forms/nps/img/star.png');
+  left: -2px;
+  top: -2px;
+  background-size: 100%;
+  transition: opacity 0.2s linear;
+}
+
+.rating > label:hover:after,  .rating > label:hover ~ label:after,  .rating:not(:hover) > :checked ~ label:after { opacity: 1; }
+
+.text-rate {
+    margin-top: 40px;
+}
+
+#opinion {
+    border: none;
+    border-radius: 10px;
+    background-color: #FFFF;
+    outline: none;
+    width: 100%;
+    min-width: 100%;
+    margin-top: 10px;
+    padding: 18px;
+    box-sizing: border-box;
+    box-shadow: 0.74px 0.67px 1px #90909036;
+}
+
+#opinion::placeholder {
+    font-family: foco;
+    font-size: 15px;
+    font-weight: 300;
+    color: #9f9f9f;
+}
+
+#submit {
+    width: 194px;
+    height: 37px;
+    border-radius: 4px;
+    border: none;
+    background-color: #1DBADF;
+    margin-top: 40px;
+    font-family: foco;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.copyright {
+    font-family: foco;
+    font-size: 13px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    text-align: center;
+    color: #848484;
+    margin: 40px 0;
+}
+
+/* SUCCESS */
+#success {
+    background-color: #218c74;
+    width: 100%;
+}
+
+.success-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.success-container .logo img {
+    width: 287.9px;
+    height: 60.7px;
+    object-fit: contain;
+}
+
+.sucess-circle img {
+    max-width: 174px;
+    max-height: 174px;
+}
+
+.success-title {
+  font-family: foco;
+  font-size: 48px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: 1.15;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.success-text {
+    height: 287px;
+    border-radius: 25px;
+    box-shadow: 0 3px 99px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 165px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.success-text span {
+    font-family: foco;
+    font-size: 28px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: center;
+    color: #5e5e5e;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    color: #FFFFFF;
+}
+
+.detalhe-2 {
+    background: #1DBADF;
+    width: 3%;
+    border-radius: 20px 0 0 0;
+    height: 150px;
+    align-self: flex-end;
+}
+
+.content {
+    background: #003986;
+    width: 95%;
+    height: 120px;
+    border-radius: 20px 0 0 0;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    padding: 30px 0;
+}
+
+.references {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.title-footer {
+    padding: 20px 0;
+}
+
+.redes {
+    display: flex;
+    gap: 20px;
+}
+
+.sac {
+    font-size: 15px;
+    font-weight: 900;
+    color: #1DBADF;
+}
+
+/* DESKTOP STYLES END */
+
+/* MOBILE STYLES START*/
+@media screen and (max-width: 767px) {
+    .form-container {
+        height: auto;
+    }
+
+    .title-footer {
+        padding: 10px 0;
+    }
+
+    .redes {
+        display: flex;
+        gap: 0;
+    }
+
+    .title h1 {
+        font-size: 28px;
+    }
+
+    .title-container {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .buying-date {
+        text-align: center;
+    }
+
+    .form {
+        padding: 50px 15px;
+    }
+
+    .options {
+        height: 55px;
+    }
+
+    .rate-title {
+        font-size: 22px
+    }
+
+    #opinion {
+        padding: 10px 10px 83px 10px;
+    }
+
+    #opinion::placeholder {
+        font-size: 13px;
+    }
+
+    /* SUCCESS */
+    .success-container .logo img {
+        width: 230.9px;
+        height: 48.7px;
+        object-fit: contain;
+    }
+
+    .sucess-circle img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .success-title {
+    font-size: 28px;
+    }
+
+    .success-text {
+        height: 196px;
+        padding: 0 55px;
+    }
+
+    .success-text span {
+        font-size: 18px;
+    }
+}
+
+/* DESKTOP STYLES END */
+</style>
+
+<body>
+    <div id="form-wrapper-omni">
+        <div class="container">
+
+            <div class="heading">
+                <div class="large-container">
+                    <div class="logo">
+                        <img src="https://cdn1.staticpanvel.com.br/cdn_service/nps/logox2.png" alt="Logo">
+                    </div>
+                    <div class="logo-2">
+                        <img src="https://cdn1.staticpanvel.com.br/cdn_service/nps/logo-panvel.png" alt="Logo2">
+                    </div>
+                </div>
+                <div class="detalhe"></div>
+            </div>
+
+            <div class="form-container">
+                <div class="form">
+                <!-- FORM -->
+                <form id="form-omni" action="https://e.panvel.com/pub/rf" method="post">
+                <input type="hidden" name="_ri_" value="X0Gzc2X%3DAQpglLjHJlDQGg2LX8zftlhbMAzerF2WM8zg9PNeqEnWDw2VwjpnpgHlpgneHmgJoXX0Gzc2X%3DAQpglLjHJlDQGo4vdzdFbGnbPLHzcCvzaDaT9y8IzegXHs2M">
+                <input type="hidden" name="EMAIL_ADDRESS_" value="$lookup(EMAIL_ADDRESS_)$">
+                <input type="hidden" name="EMAIL_ADDRESS" value="$lookup(EMAIL_ADDRESS_)$">
+                <input type="hidden" name="RIID" value="$lookup(RIID_)$">
+                <input type="hidden" name="ORIGEM_NOTA" value="F">
+                <input type="hidden" name="ORDER_ID" value="$lookup(ORDER_ID)$">
+                <input type="hidden" name="NOTA_NPS_EMAIL" value="$lookup(NOTA_NPS)$">
+                <div class="title-container container">
+                    <div class="buying-date">
+                        <span id="date-text">Serviço: <strong>[Nome do serviço]</strong></span>
+                        <span id="order-number"></span>
+                        <br>
+                        <span id="date-text">Data da compra: <strong>[data]</strong></span>
+                        <span id="order-date"></span>
+                    </div>
+                </div>
+                    <!-- QUESTION 1 -->
+                    <h2>De 0 a 10 o quanto você recomendaria a Panvel para um amigo?</h2>
+                    <div class="options">
+                        <div class="notes">
+                            <input type="radio" name="NOTA_NPS" id="q1-nota0" value="0">
+                            <label for="q1-nota0" class="note">0</label>
+                            <input type="radio" name="NOTA_NPS" id="q1-nota1" value="1">
+                            <label for="q1-nota1" class="note">1</label>
+                            <input type="radio" name="NOTA_NPS" id="q1-nota2" value="2">
+                            <label for="q1-nota2" class="note">2</label>
+                            <input type="radio" name="NOTA_NPS" id="q1-nota3" value="3">
+                            <label for="q1-nota3" class="note">3</label>
+                            <input type="radio" name="NOTA_NPS" id="q1-nota4" value="4">
+                            <label for="q1-nota4" class="note">4</label>
+                            <input type="radio" name="NOTA_NPS" id="q1-nota5" value="5">
+                            <label for="q1-nota5" class="note">5</label>
+                            <input type="radio" name="NOTA_NPS" id="q1-nota6" value="6">
+                            <label for="q1-nota6" class="note">6</label>
+                            <input type="radio" name="NOTA_NPS" id="q1-nota7" value="7">
+                            <label for="q1-nota7" class="note">7</label>
+                            <input type="radio" name="NOTA_NPS" id="q1-nota8" value="8">
+                            <label for="q1-nota8" class="note">8</label>
+                            <input type="radio" name="NOTA_NPS" id="q1-nota9" value="9">
+                            <label for="q1-nota9" class="note">9</label>
+                            <input type="radio" name="NOTA_NPS" id="q1-nota10" value="10">
+                            <label for="q1-nota10" class="note">10</label>
+                        </div>
+                    </div>
+                    <div class="recommendation">
+                        <div>Não recomendaria</div>
+                        <div>Recomendaria certamente</div>
+                    </div>
+                    <h2>[Nome], pode nos contar um pouco mais da sua experiência?</h2>
+
+                    <!-- STAR RATE DIV -->
+                    <div class="star-rate">
+                        <!-- QUESTION 2 -->
+                        <div class="star-question">
+                            <span class="rating-text question-text">
+                                Facilidade para comprar
+                            </span>
+                            <span class="rating">
+                                <input id="q2-nota5" type="radio" name="ENCONTRAR_PRODUTOS" value="5">
+                                <label for="q2-nota5">5</label>
+                                <input id="q2-nota4" type="radio" name="ENCONTRAR_PRODUTOS" value="4">
+                                <label for="q2-nota4">4</label>
+                                <input id="q2-nota3" type="radio" name="ENCONTRAR_PRODUTOS" value="3">
+                                <label for="q2-nota3">3</label>
+                                <input id="q2-nota2" type="radio" name="ENCONTRAR_PRODUTOS" value="2">
+                                <label for="q2-nota2">2</label>
+                                <input id="q2-nota1" type="radio" name="ENCONTRAR_PRODUTOS" value="1">
+                                <label for="q2-nota1">1</label>
+                            </span>
+                        </div>
+
+                        <!-- QUESTION 3 -->
+                        <div class="star-question">
+                            <span class="rating-text question-text">
+                                Preço
+                            </span>
+                            <span class="rating">
+                                <input id="q3-nota5" type="radio" name="VARIEDADE" value="5">
+                                <label for="q3-nota5">5</label>
+                                <input id="q3-nota4" type="radio" name="VARIEDADE" value="4">
+                                <label for="q3-nota4">4</label>
+                                <input id="q3-nota3" type="radio" name="VARIEDADE" value="3">
+                                <label for="q3-nota3">3</label>
+                                <input id="q3-nota2" type="radio" name="VARIEDADE" value="2">
+                                <label for="q3-nota2">2</label>
+                                <input id="q3-nota1" type="radio" name="VARIEDADE" value="1">
+                                <label for="q3-nota1">1</label>
+                            </span>
+                        </div>
+
+                        <!-- QUESTION 4 -->
+                        <div class="star-question">
+                            <span class="rating-text question-text">
+                                Atendimento
+                            </span>
+                            <span class="rating">
+                                <input id="q4-nota5" type="radio" name="PRECO" value="5">
+                                <label for="q4-nota5">5</label>
+                                <input id="q4-nota4" type="radio" name="PRECO" value="4">
+                                <label for="q4-nota4">4</label>
+                                <input id="q4-nota3" type="radio" name="PRECO" value="3">
+                                <label for="q4-nota3">3</label>
+                                <input id="q4-nota2" type="radio" name="PRECO" value="2">
+                                <label for="q4-nota2">2</label>
+                                <input id="q4-nota1" type="radio" name="PRECO" value="1">
+                                <label for="q4-nota1">1</label>
+                            </span>
+                        </div>
+
+                        <!-- QUESTION 5 -->
+                        <div class="star-question">
+                            <span class="rating-text question-text">
+                                Conhecimento técnico do profissional
+                            </span>
+                            <span class="rating">
+                                <input id="q5-nota5" type="radio" name="ATENDIMENTO" value="5">
+                                <label for="q5-nota5">5</label>
+                                <input id="q5-nota4" type="radio" name="ATENDIMENTO" value="4">
+                                <label for="q5-nota4">4</label>
+                                <input id="q5-nota3" type="radio" name="ATENDIMENTO" value="3">
+                                <label for="q5-nota3">3</label>
+                                <input id="q5-nota2" type="radio" name="ATENDIMENTO" value="2">
+                                <label for="q5-nota2">2</label>
+                                <input id="q5-nota1" type="radio" name="ATENDIMENTO" value="1">
+                                <label for="q5-nota1">1</label>
+                            </span>
+                        </div>
+
+                        <div class="star-question">
+                            <span class="rating-text question-text">
+                                Limpeza/organização da sala onde realizou o serviço
+                            </span>
+                            <span class="rating">
+                                <input id="q5-nota5" type="radio" name="ATENDIMENTO" value="5">
+                                <label for="q5-nota5">5</label>
+                                <input id="q5-nota4" type="radio" name="ATENDIMENTO" value="4">
+                                <label for="q5-nota4">4</label>
+                                <input id="q5-nota3" type="radio" name="ATENDIMENTO" value="3">
+                                <label for="q5-nota3">3</label>
+                                <input id="q5-nota2" type="radio" name="ATENDIMENTO" value="2">
+                                <label for="q5-nota2">2</label>
+                                <input id="q5-nota1" type="radio" name="ATENDIMENTO" value="1">
+                                <label for="q5-nota1">1</label>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- TEXT RATE DIV -->
+                    <div class="text-rate">
+                        <!-- QUESTION 5 -->
+                        <h2>
+                            Deixe um comentário
+                        </h2>
+                        <div class="rate-textarea">
+                            <textarea maxlength="400" rows="7" cols="50" type="textarea" id="opinion" name="COMENTARIO" placeholder="O que você gostaria de falar para a Panvel?"></textarea>
+                        </div>
+                    </div>
+                    
+                    <!-- FORM SUBMIT -->
+                    <div class="button">
+                        <button id="submit" type="submit">Enviar avaliação</button>
+                    </div>
+                    
+
+                    </form>
+                </div>
+            	
+                <!-- /FORM -->
+            </div>
+
+            <!-- FOOTER -->
+            <div class="footer">
+                <div class="detalhe-2"></div>
+                <div class="content">Ficou com dúvidas? Então é só entrar em contato com a gente: <br> sac@panvel.com.br
+                    <div class="references">
+                        <div>
+                            <div class="title-footer">SIGA A PANVEL</div>
+                            <div class="redes">
+                                <a href="https://twitter.com/panvelfarmacias"
+                                    target="_blank">
+                                    <img alt="Twitter" width="30" src="https://cdn1.staticpanvel.com.br/cdn_service/nps/twitter.png"/>
+                                </a>
+                                <a href="https://www.facebook.com/panvelfarmacias"
+                                    target="_blank">
+                                    <img alt="Facebook" width="30" src="https://cdn1.staticpanvel.com.br/cdn_service/nps/facebook.png"/>
+                                </a>
+                                <a href="https://www.instagram.com/panvelfarmacias/"
+                                    target="_blank">
+                                    <img alt="Instagram" width="30" src="https://cdn1.staticpanvel.com.br/cdn_service/nps/instagram.png"/>
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="title-footer">SAC</div>
+                            <div class="sac">0800.642.9001</div>
+                        </div>
+                        <div>
+                            <div class="title-footer">BAIXE NOSSO APP</div>
+                            <a href="https://itunes.apple.com/br/app/panvel-farm%C3%A1cia-e-perfumaria/id1039184023?mt=8"
+                                target="_blank">
+                                <img alt="App Store"
+                                    width="75" src="https://cdn1.staticpanvel.com.br/cdn_service/nps/app-store.png"/>
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=br.com.dimed.panvel&hl=pt_BR"
+                                target="_blank">
+                                <img alt="Google Play" width="80" src="https://cdn1.staticpanvel.com.br/cdn_service/nps/google-play.png"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>   
+</body>
+</html>
